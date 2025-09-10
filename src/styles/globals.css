@@ -1,0 +1,444 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Portfolio Color System */
+  --fg-base: #0B0B0B;
+  --fg-muted: #4B4B4B;
+  --bg-page: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --border-base: #EAEAEA;
+  --accent-brand: #2E6CFF;
+  
+  /* Dark mode variables */
+  --dm-fg-base: #FAFAFA;
+  --dm-fg-muted: #B4B4B4;
+  --dm-bg-page: #0B0B0B;
+  --dm-bg-card: #1A1A1A;
+  --dm-border-base: #2A2A2A;
+  --dm-accent-brand: #4A7CFF;
+  
+  /* Spacing scale */
+  --space-4: 0.25rem;   /* 4px */
+  --space-8: 0.5rem;    /* 8px */
+  --space-12: 0.75rem;  /* 12px */
+  --space-16: 1rem;     /* 16px */
+  --space-24: 1.5rem;   /* 24px */
+  --space-32: 2rem;     /* 32px */
+  --space-48: 3rem;     /* 48px */
+  
+  /* Typography scale */
+  --text-display: 3.5rem;    /* 56px */
+  --text-h1: 2.5rem;         /* 40px */
+  --text-h2: 2rem;           /* 32px */
+  --text-h3: 1.5rem;         /* 24px */
+  --text-body: 1rem;         /* 16px */
+  --text-small: 0.875rem;    /* 14px */
+  --text-caption: 0.75rem;   /* 12px */
+  
+  /* Legacy variables for compatibility */
+  --background: var(--bg-page);
+  --foreground: var(--fg-base);
+  --card: var(--bg-card);
+  --card-foreground: var(--fg-base);
+  --popover: var(--bg-card);
+  --popover-foreground: var(--fg-base);
+  --primary: var(--accent-brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--bg-card);
+  --secondary-foreground: var(--fg-base);
+  --muted: var(--bg-page);
+  --muted-foreground: var(--fg-muted);
+  --accent: var(--bg-card);
+  --accent-foreground: var(--fg-base);
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: var(--border-base);
+  --input: transparent;
+  --input-background: var(--bg-card);
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 400;
+  --ring: var(--accent-brand);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 1rem;  /* 16px radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  
+  /* Shadow system */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  /* Grid system */
+  --container-width: 75rem; /* 1200px */
+  --grid-cols-desktop: 12;
+  --grid-cols-tablet: 8;
+  --grid-cols-mobile: 4;
+  --grid-gutter: 1.5rem; /* 24px */
+  --grid-margin: 2.5rem; /* 40px */
+
+  /* Legacy Shadcn variables */
+  --sidebar: var(--bg-card);
+  --sidebar-foreground: var(--fg-base);
+  --sidebar-primary: var(--accent-brand);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--bg-page);
+  --sidebar-accent-foreground: var(--fg-base);
+  --sidebar-border: var(--border-base);
+  --sidebar-ring: var(--accent-brand);
+}
+
+.dark {
+  --background: var(--dm-bg-page);
+  --foreground: var(--dm-fg-base);
+  --card: var(--dm-bg-card);
+  --card-foreground: var(--dm-fg-base);
+  --popover: var(--dm-bg-card);
+  --popover-foreground: var(--dm-fg-base);
+  --primary: var(--dm-accent-brand);
+  --primary-foreground: var(--dm-bg-page);
+  --secondary: var(--dm-bg-card);
+  --secondary-foreground: var(--dm-fg-base);
+  --muted: var(--dm-bg-page);
+  --muted-foreground: var(--dm-fg-muted);
+  --accent: var(--dm-bg-card);
+  --accent-foreground: var(--dm-fg-base);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: var(--dm-border-base);
+  --input: var(--dm-border-base);
+  --ring: var(--dm-accent-brand);
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: var(--dm-bg-card);
+  --sidebar-foreground: var(--dm-fg-base);
+  --sidebar-primary: var(--dm-accent-brand);
+  --sidebar-primary-foreground: var(--dm-bg-page);
+  --sidebar-accent: var(--dm-bg-page);
+  --sidebar-accent-foreground: var(--dm-fg-base);
+  --sidebar-border: var(--dm-border-base);
+  --sidebar-ring: var(--dm-accent-brand);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+/**
+ * Portfolio Typography System
+ * Based on Inter font family with specified sizes and weights
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    /* Display 56px/semibold */
+    .text-display, [data-text="display"] {
+      font-size: var(--text-display);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+    }
+
+    /* H1 40px/semibold */
+    h1 {
+      font-size: var(--text-h1);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+    }
+
+    /* H2 32px/semibold */
+    h2 {
+      font-size: var(--text-h2);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+    }
+
+    /* H3 24px/medium */
+    h3 {
+      font-size: var(--text-h3);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-body);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    /* Body 16px/regular */
+    p, div {
+      font-size: var(--text-body);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+    }
+
+    /* Small 14px/regular */
+    small, .text-small {
+      font-size: var(--text-small);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    /* Caption 12px/regular */
+    .text-caption {
+      font-size: var(--text-caption);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+    }
+
+    label {
+      font-size: var(--text-body);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-body);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input, textarea {
+      font-size: var(--text-body);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Utility classes for direct typography control */
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: 1.4 !important;
+  }
+
+  .text-h1 {
+    font-size: var(--text-h1) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: 1.4 !important;
+  }
+
+  .text-h2 {
+    font-size: var(--text-h2) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: 1.4 !important;
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3) !important;
+    font-weight: var(--font-weight-medium) !important;
+    line-height: 1.5 !important;
+  }
+
+  .text-body {
+    font-size: var(--text-body) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: 1.6 !important;
+  }
+
+  .text-small {
+    font-size: var(--text-small) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: 1.5 !important;
+  }
+
+  .text-caption {
+    font-size: var(--text-caption) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Container utility */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-16);
+    padding-right: var(--space-16);
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-left: var(--space-24);
+      padding-right: var(--space-24);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: var(--container-width);
+      padding-left: var(--grid-margin);
+      padding-right: var(--grid-margin);
+    }
+  }
+
+  /* Line clamp utility */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus styles for accessibility */
+  .focus-ring {
+    outline: 2px solid var(--accent-brand);
+    outline-offset: 2px;
+  }
+
+  /* Card shadows */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
