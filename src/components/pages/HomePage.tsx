@@ -81,8 +81,7 @@ export function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Currently based in Singapore, crafting digital experiences that bridge user needs 
-              with business goals through thoughtful design and strategic thinking.
+              Senior Product Designer | UI/UX Specialist in Finance & Wealth | Figma, Design Systems, User Research | Based in Singapore
             </motion.p>
           </div>
         </div>
